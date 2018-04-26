@@ -38,7 +38,7 @@
 							
 					<li class="item-archive">
 						<div class="time-and-thumb-archive">
-							<time class="pub-date" datetime="2017-04-01T23:59:99+09:00">2017年4月1日</time>
+							<time class="pub-date" datetime="<?php echo get_the_date( DATE_W3C) ; ?>"><?php echo get_the_date() ; ?></time>
 							<p class="thumb thumb-archive"><a href="<?php the_permalink() ; ?>"><img src="http://placehold.it/190x130"></a></p>
 						</div>
 						<div class="data-archive">
