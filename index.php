@@ -59,18 +59,11 @@
 
 			<!-- ページネーション -->
 			<?php the_posts_pagination( array(
-			'prev_text' => '<img class="arrow" src="images/arrow-left.png" srcset="images/arrow-left@2x.png 2x" alt="前へ">',
-			'next_text' => '<img class="arrow" src="images/arrow-right.png" srcset="images/arrow-right@2x.png 2x" alt="次へ">',
+			'prev_text' => '<img class="arrow" src="' . get_theme_file_uri() . '/images/arrow-left.png" srcset="' . get_theme_file_uri() . '/images/arrow-left@2x.png 2x" alt="前へ">',
+			'next_text' => '<img class="arrow" src="' . get_theme_file_uri() . '/images/arrow-right.png" srcset="' . get_theme_file_uri() . '/images/arrow-right@2x.png 2x" alt="次へ">',
 			) ) ; ?>
 		
 		
-			<nav class="pagination">
-				<div class="nav-links">
-					<span class="current">1</span>
-					<a href="index.html">2</a>
-					<a href="index.html"><img class="arrow" src="images/arrow-right.png" srcset="images/arrow-right@2x.png 2x" alt="次へ"></a>
-				</div>
-			</nav>
 
 		</div>
 
