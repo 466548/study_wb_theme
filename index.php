@@ -56,15 +56,8 @@
 					<?php endif; ?>
 
 			</div>
-
-			<nav class="pagination">
-				<div class="nav-links">
-					<span class="current">1</span>
-					<a href="index.html">2</a>
-					<a href="index.html"><img class="arrow" src="images/arrow-right.png" srcset="images/arrow-right@2x.png 2x" alt="次へ"></a>
-				</div>
-			</nav>
-
+					<!-- ページネーション -->
+			<?php the_posts_pagination() ; ?>
 		</div>
 
 		<ul class="side-column">
