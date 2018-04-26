@@ -12,3 +12,11 @@ function easiestwp_setup() {
 	register_nav_menus( array( 'global' => 'Global Menu', ) );
 }
 add_action( 'after_setup_theme', 'easiestwp_setup' );
+
+function easiestwp_widgets_init() {
+	register_sidebar( array( 
+		'name' => 'Sidebar',
+		'id' => 'sidebar',
+	) );
+}
+add_action( 'widgets_init', 'easiestwp_widgets_init' );
