@@ -13,15 +13,17 @@
 				<p class="site-subtitle"><?php bloginfo( 'description' ); ?></p>
 			</div>
 
-			<nav class="global-nav">
-				<ul id="global-menu" class="menu">
-					<li class="current-menu-item"><a href="index.html">ホーム</a></li>
-					<li><a href="portfolio.html">ポートフォリオ</a></li>
-					<li><a href="profile.html">プロフィール</a></li>
-					<li><a href="contact.html">お問い合わせ</a></li>
-				</ul>
-			</nav>
+		<?php if ( has_nav_menu( 'global' ) ) : ?>
+			<?php wp_nav_menu( array(
+				'theme_location'  => 'global',
+				'menu_id'		  => 'global-menu',
+				'container'		  => 'nav',
+				'container_class' => 'global-nav',
+			) ); ?>
+		<?php endif; ?>
 
+		
+		
 		</div>
 	</header>
 
@@ -39,7 +41,11 @@
 					<li class="item-archive">
 						<div class="time-and-thumb-archive">
 							<time class="pub-date" datetime="<?php echo get_the_date( DATE_W3C) ; ?>"><?php echo get_the_date() ; ?></time>
-							<p class="thumb thumb-archive"><a href="<?php the_permalink() ; ?>"><img src="http://placehold.it/190x130"></a></p>
+							<?php if ( has_post_thumbnail() ) : ?>
+							<p class="thumb thumb-archive"><a href="<?php the_permalink() ; ?>">
+							<?php the_post_thumbnail( 'easiestwp-thumbnail' ) ; ?></a></p>
+							<?php endif; ?>
+
 						</div>
 						<div class="data-archive">
 							<p class="list-categories-archive"><a href="<?php the_category(',') ; ?>">カテゴリ名</a></p>
