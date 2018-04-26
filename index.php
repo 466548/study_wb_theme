@@ -72,35 +72,12 @@
 		
 
 		</div>
-
+		<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 		<ul class="side-column">
-			<li class="widget">
-				<form class="searchform">
-					<div>
-						<input type="text">
-						<input value="検索" type="submit">
-					</div>
-				</form>
-			</li>
-			<li class="widget">
-				<h2 class="widgettitle">最近の投稿</h2>
-				<ul>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-					<li><a href="single.html">記事タイトル記事タイトル記事タイトル記事タイトル</a></li>
-				</ul>
-			</li>
-			<li class="widget">
-				<h2 class="widgettitle">カテゴリー</h2>
-				<ul>
-					<li><a href="archive.html">カテゴリ名</a></li>
-					<li><a href="archive.html">カテゴリ名</a></li>
-					<li><a href="archive.html">カテゴリ名</a></li>
-				</ul>
-			</li>
+			<?php dynamic_sidebar( 'sidebar' ); ?>
 		</ul>
+		<?php endif; ?>
+
 
 	</div>
 
