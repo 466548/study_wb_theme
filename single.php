@@ -28,12 +28,11 @@
 						<p class="meta meta-tag"><?php the_tags() ; ?></p>
 					</div>
 
-					<nav class="navigation post-navigation" role="navigation">
-						<div class="nav-links">
-							<div class="nav-previous"><a href="single.html">前の記事：記事タイトル記事タイトル記事タイトル記事タイトル</a></div>
-							<div class="nav-next"><a href="single.html">次の記事：記事タイトル記事タイトル記事タイトル記事タイトル</a></div>
-						</div>
-					</nav>
+					<?php the_post_navigation( array(
+						'prev_text' => '前の記事:%title',
+						'next_text' => '次の記事:%title',
+					) ) ; ?>
+								
 				</div>
 			</div>
 
