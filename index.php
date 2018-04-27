@@ -1,3 +1,4 @@
+<!-- header切り分け -->
 <?php get_header() ; ?>
 	<div class="hero"></div>
 	<div class="content-area has-side-col">
@@ -41,33 +42,11 @@
 			'next_text' => '<img class="arrow" src="' . get_theme_file_uri() . '/images/arrow-right.png" srcset="' . get_theme_file_uri() . '/images/arrow-right@2x.png 2x" alt="次へ">',
 			) ) ; ?>
 		
-		
-
 		</div>
-		<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-		<ul class="side-column">
-			<?php dynamic_sidebar( 'sidebar' ); ?>
-		</ul>
-		<?php endif; ?>
-
+		
+		<!-- sidebar切り分け -->
+		<?php get_sidebar() ; ?>
 
 	</div>
 
-	<footer class="page-footer">
-		<div class="footer-widget-area">
-			<ul class="footer-widgets">
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-				<li><a href="#"><img src="http://placehold.it/320x80"></a></li>
-			</ul>
-			<div class="back-to-top">
-				<a href="#"><img src="images/arrow-up.png" srcset="images/arrow-up@2x.png 2x" alt="">TOP</a>
-			</div>
-		</div>
-		<div class="copyright">
-			<p>Copyright ©  Gijutsu-Hyohron Co., Ltd.</p>
-		</div>
-	</footer>
-	<?php wp_footer(); ?>
-</body>
-</html>
+	<?php get_footer() ; ?>
