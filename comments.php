@@ -1,3 +1,10 @@
+<!-- パスワードを必要とする投稿ではコメントテンプレートを表示しない -->
+<?php 
+if ( post_password_required()){
+	return;
+}
+?>
+		
 			<?php if ( have_comments() ) : ?>
 			<div class="box-generic">
 				<div class="box-content box-comment-display">
