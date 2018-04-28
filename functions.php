@@ -10,6 +10,11 @@ function easiestwp_setup() {
 	add_image_size( 'post-thumbnails', 190, 130, true ) ;
 	add_image_size( 'easiestwp-hero', 1200, 630, true ) ;
 	register_nav_menus( array( 'global' => 'Global Menu', ) );
+	
+	add_theme_support( 'html5' , array(
+	'comment-form',
+	'comment-list',
+	) );	
 }
 add_action( 'after_setup_theme', 'easiestwp_setup' );
 
