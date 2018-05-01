@@ -8,7 +8,7 @@
 			<h1 class="box-heading box-heading-main-col"><?php the_archive_title(); ?></h1>
 			<div class="box-content">
 					<?php if ( have_posts() ) : ?>
-				<ul>
+				<ul class="archive">
 
 					<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
