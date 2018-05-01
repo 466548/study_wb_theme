@@ -25,3 +25,25 @@ function easiestwp_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'easiestwp_widgets_init' );
+
+//テーマカスタマイザーの拡張
+function easiestwp_customize_register( $wp_customize ) {
+	$wp_customize->add_section( 'theme_options', array(
+		'title'    => 'Theme Options',
+		'priority' => 130,
+	) );
+	
+	for ( $i =1; $i <= 5; $i++ ){
+			$wp_customize->add_setting( 'front_page_content_' .$i, array(
+			'default'           => false,
+			'sanitize_callback' => 'absint',
+		) );
+			$wp_customize->add_control( 'front_page_content_' .$i, array(
+			'label'           => 'Front Page Content ' .$i,
+			'section' => 'theme_options',
+			'type' => 'dropdown-pages',
+			'allow_addition' => 'true',
+		) );
+	}
+}
+add_action( 'customize_register', 'easiestwp_customize_register' );
